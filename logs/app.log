@@ -1,0 +1,37 @@
+2025-08-30 14:12:25,190 [INFO] api.main: Starting Staffing Optimization API...
+2025-08-30 14:12:25,191 [INFO] api.main: API startup completed
+2025-08-30 14:12:25,191 [INFO] api.main: Initializing forecasting and optimization models...
+2025-08-30 14:12:25,191 [INFO] api.main: Models initialized successfully
+2025-08-30 14:12:37,056 [INFO] uvicorn.access: 127.0.0.1:52782 - "GET /health HTTP/1.1" 200
+2025-08-30 14:15:26,251 [INFO] uvicorn.access: 127.0.0.1:52813 - "GET / HTTP/1.1" 404
+2025-08-30 14:15:26,268 [INFO] uvicorn.access: 127.0.0.1:52813 - "GET /favicon.ico HTTP/1.1" 404
+2025-08-30 14:15:52,009 [INFO] api.main: Starting Staffing Optimization API...
+2025-08-30 14:15:52,009 [INFO] api.main: API startup completed
+2025-08-30 14:15:52,009 [INFO] api.main: Initializing forecasting and optimization models...
+2025-08-30 14:15:52,009 [INFO] api.main: Models initialized successfully
+2025-08-30 14:15:52,010 [INFO] api.main: Shutting down Staffing Optimization API...
+2025-08-30 14:17:50,309 [INFO] uvicorn.access: 127.0.0.1:52837 - "GET /docs HTTP/1.1" 200
+2025-08-30 14:17:54,488 [INFO] audit: {"event": "forecast_generated", "user": "demo_user", "date_range": "2024-01-01 to 2024-01-03", "model_version": "1.0.0", "timestamp": "2025-08-30T12:17:54.488195"}
+2025-08-30 14:17:54,488 [INFO] uvicorn.access: 127.0.0.1:52839 - "POST /api/v1/forecast HTTP/1.1" 200
+2025-08-30 14:18:59,701 [INFO] api.main: Starting Staffing Optimization API...
+2025-08-30 14:18:59,702 [INFO] api.main: API startup completed
+2025-08-30 14:18:59,702 [INFO] api.main: Initializing forecasting and optimization models...
+2025-08-30 14:18:59,702 [INFO] api.main: Models initialized successfully
+2025-08-30 14:18:59,704 [INFO] api.main: Shutting down Staffing Optimization API...
+2025-08-30 14:19:10,343 [INFO] api.main: Starting Staffing Optimization API...
+2025-08-30 14:19:10,343 [INFO] api.main: API startup completed
+2025-08-30 14:19:10,343 [INFO] api.main: Initializing forecasting and optimization models...
+2025-08-30 14:19:10,343 [INFO] api.main: Models initialized successfully
+2025-08-30 14:19:25,443 [INFO] uvicorn.access: 127.0.0.1:52880 - "GET /health HTTP/1.1" 200
+2025-08-30 14:19:28,251 [INFO] uvicorn.access: 127.0.0.1:52884 - "GET /metrics HTTP/1.1" 200
+2025-08-30 14:19:33,740 [INFO] uvicorn.access: 127.0.0.1:52887 - "GET /health/ready HTTP/1.1" 200
+2025-08-30 14:20:19,684 [INFO] uvicorn.access: 127.0.0.1:52899 - "GET /health HTTP/1.1" 200
+2025-08-30 14:22:35,263 [INFO] uvicorn.access: 127.0.0.1:52927 - "GET / HTTP/1.1" 404
+2025-08-30 14:22:38,670 [INFO] uvicorn.access: 127.0.0.1:52929 - "GET /health HTTP/1.1" 200
+2025-08-30 14:22:48,710 [INFO] uvicorn.access: 127.0.0.1:52932 - "GET /health/ready HTTP/1.1" 200
+2025-08-30 14:22:50,420 [INFO] uvicorn.access: 127.0.0.1:52934 - "GET /health/live HTTP/1.1" 200
+2025-08-30 14:22:59,979 [INFO] audit: {"event": "forecast_generated", "user": "demo_user", "date_range": "2024-01-01 to 2024-01-03", "model_version": "1.0.0", "timestamp": "2025-08-30T12:22:59.979700"}
+2025-08-30 14:22:59,980 [INFO] uvicorn.access: 127.0.0.1:52940 - "POST /api/v1/forecast HTTP/1.1" 200
+2025-08-30 14:23:07,878 [ERROR] api.main: Optimization failed: 'UpperBound'
+2025-08-30 14:23:07,879 [INFO] uvicorn.access: 127.0.0.1:52942 - "POST /api/v1/optimize HTTP/1.1" 500
+2025-08-30 14:23:12,574 [INFO] uvicorn.access: 127.0.0.1:52945 - "GET /metrics HTTP/1.1" 200

@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  # Development override for main application
+  staffing-app:
+    build:
+      target: development
+    environment:
+      - ENVIRONMENT=development
+      - DEBUG=true
+    volumes:
+      - .:/app
+      - /app/__pycache__
+    command: ["python", "-m", "uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+    ports:
+      - "8000:8000"
+      - "8001:8001"  # Debug port
+
+  # Development database with exposed port
+  postgres:
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=staffing_db_dev
+      - POSTGRES_USER=dev_user
+      - POSTGRES_PASSWORD=dev_pass
+
+  # Development Redis
+  redis:
+    ports:
+      - "6379:6379"
+
+  # Skip monitoring services in development
+  prometheus:
+    profiles:
+      - monitoring
+
+  grafana:
+    profiles:
+      - monitoring
+
+  nginx:
+    profiles:
+      - production

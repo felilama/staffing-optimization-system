@@ -1,0 +1,3 @@
+2025-08-30 14:15:52,010 [ERROR] uvicorn.error: [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): address already in use
+2025-08-30 14:18:59,703 [ERROR] uvicorn.error: [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): address already in use
+2025-08-30 14:23:07,878 [ERROR] api.main: Optimization failed: 'UpperBound'

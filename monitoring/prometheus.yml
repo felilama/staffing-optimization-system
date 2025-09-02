@@ -1,0 +1,57 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+rule_files:
+  - "rules/*.yml"
+
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+          - alertmanager:9093
+
+scrape_configs:
+  # Staffing Optimization Application
+  - job_name: 'staffing-app'
+    static_configs:
+      - targets: ['staffing-app:9090']
+    scrape_interval: 10s
+    metrics_path: '/metrics'
+    
+  # PostgreSQL Database
+  - job_name: 'postgres'
+    static_configs:
+      - targets: ['postgres:5432']
+    scrape_interval: 30s
+    
+  # Redis Cache
+  - job_name: 'redis'
+    static_configs:
+      - targets: ['redis:6379']
+    scrape_interval: 30s
+    
+  # Node Exporter (System Metrics)
+  - job_name: 'node-exporter'
+    static_configs:
+      - targets: ['node-exporter:9100']
+    scrape_interval: 15s
+    
+  # Prometheus itself
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+    scrape_interval: 30s
+
+# Recording rules for common queries
+recording_rules:
+  - name: "staffing_optimization_rules"
+    rules:
+      - record: "staffing:request_rate"
+        expr: "rate(http_requests_total[5m])"
+      
+      - record: "staffing:error_rate"
+        expr: "rate(http_requests_total{status=~'5..'}[5m]) / rate(http_requests_total[5m])"
+      
+      - record: "staffing:optimization_success_rate"
+        expr: "rate(optimization_runs_total[1h])"

@@ -1,0 +1,2 @@
+2025-08-30 14:17:54,488 [AUDIT] {"event": "forecast_generated", "user": "demo_user", "date_range": "2024-01-01 to 2024-01-03", "model_version": "1.0.0", "timestamp": "2025-08-30T12:17:54.488195"}
+2025-08-30 14:22:59,979 [AUDIT] {"event": "forecast_generated", "user": "demo_user", "date_range": "2024-01-01 to 2024-01-03", "model_version": "1.0.0", "timestamp": "2025-08-30T12:22:59.979700"}
