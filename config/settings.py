@@ -65,6 +65,7 @@ class StaffingSettings(BaseSettings):
         env_file = ".env"
         env_file_encoding = "utf-8"
         case_sensitive = False
+        extra = "allow"  # Allow extra fields from environment
 
 
 def load_config(config_file: Optional[Path] = None) -> Dict[str, Any]:
